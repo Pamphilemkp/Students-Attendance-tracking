@@ -1,0 +1,16 @@
+default: &default
+  # ...
+  compile: true
+  source_path: app/javascript
+  source_entry_path: packs
+  public_output_path: packs
+  # ...
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default

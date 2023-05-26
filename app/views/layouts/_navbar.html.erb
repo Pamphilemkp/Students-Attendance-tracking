@@ -1,36 +1,33 @@
 <nav class="navbar bg-body-tertiary fixed-top bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-     <span class="navbar-text text-light">
-        The Chill School
-     <i class="fa fa-school"></i>
-     </span>
-         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 bg-dark text-light">
-            <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item text-light" href="#">Action</a></li>
-              <li><a class="dropdown-item text-light" href="#">Another action</a></li>
-              <li>
-                <hr class="dropdown-divider text-light">
-              </li>
-              <li><a class="dropdown-item text-light" href="#">Something else here</a></li>
-            </ul>
-          </li>
-        </ul>
 
-    </a>
+    <div class="d-flex gap-2">
+        <div>
+            <a class="navbar-brand" href="#">
+                <span class="navbar-text text-light">
+                    The Chill School
+                <i class="fa fa-school"></i>
+                </span>
+             </a>
+        </div>
+        <p>
+          <%= link_to "Home", root_path, class: "nav-link text-light" %>
+        </p>
+        <p>
+           <%= link_to "Privacy policy", privacy_policy_path, class: "nav-link text-light #{'active font-weight-bold'}" %>
+        </p>
+    </div>
+
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+       <i class="fa fa-user text-light"></i>
+      <span class="text-light">pamphilemkp</span>
     </button>
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Profile</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
-       
         <form class="d-flex mt-3" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>

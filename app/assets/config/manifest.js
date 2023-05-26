@@ -4,6 +4,7 @@
 //= link application.css
 //= require bootstrap
  //= link style.css
+ //= link application.js
 
 
 
