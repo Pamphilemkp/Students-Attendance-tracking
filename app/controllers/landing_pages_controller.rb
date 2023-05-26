@@ -1,4 +1,4 @@
-class StaticPagesController < ApplicationController
+class LandingPagesController < ApplicationController
   def welcome_page
   end
 

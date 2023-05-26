@@ -1,0 +1,7 @@
+
+@import 'bootstrap';
+@use '@fortawesome/fontawesome-free/scss/fontawesome' with (
+  $fa-font-path: '~@fortawesome/fontawesome-free/webfonts',
+);
+@use '@fortawesome/fontawesome-free/scss/solid';
+@use '@fortawesome/fontawesome-free/scss/brands';
