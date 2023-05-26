@@ -3,6 +3,7 @@
 //= link_tree ../builds
 //= link application.css
 //= require bootstrap
+ //= link style.css
 
 
 

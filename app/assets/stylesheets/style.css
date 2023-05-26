@@ -1,0 +1,17 @@
+
+.navbar .navbar-nav .nav-item .nav-link:hover {
+    background-color: rgb(117, 123, 177); /* Set your chosen background color */
+    border: 1px solid rgb(117, 123, 177); /* Set your chosen border color */
+  }
+
+  .navbar .navbar-nav .nav-item .nav-link:focus {
+    background-color: #f00; /* Set your chosen background color */
+    border: 1px solid #f00; /* Set your chosen border color */
+    color: #f00;
+  }
+
+  .navbar .navbar-nav .nav-item .nav-link:active {
+    background-color: #f00; /* Set your chosen background color */
+    border: 1px solid #f00; /* Set your chosen border color */
+    color: #f00;
+  }
