@@ -16,5 +16,11 @@
     <p>Last name: <%= user.last_name %></p>
     <p>Adress: <%= user.adress %></p>
     <p>Phone: <%= user.phone %></p>
+
+    <p>Number of connexion to the system: <%= user.sign_in_count %></p>
+    <p>Current time of connexion: <%= user.current_sign_in_at %></p>
+    <p>Last time of connexion: <%= user.last_sign_in_at %></p>
+    <p>Current ip address: <%= user.current_sign_in_ip %></p>
+    <p>Last ip address: <%= user.last_sign_in_ip%></p>
 </div>
 <hr>
