@@ -1,0 +1,20 @@
+<div id="<%= dom_id user %>">
+    
+    <p>Photo: </p>
+        <% if user.photo.attached? %>
+            <%= image_tag(user.photo, size: "200x200") %>
+        <% else %>
+            No picture
+        <% end %>  
+    
+    <p>id: <%= user.id %></p>
+    <p>Email: <%= user.email %></p>
+    <p>Created at: <%= user.created_at %></p>
+    <p>Updated at: <%= user.updated_at %></p>
+    <p>Confirmed at: <%= user.confirmed_at %></p>
+    <p>First name: <%= user.first_name %></p>
+    <p>Last name: <%= user.last_name %></p>
+    <p>Adress: <%= user.adress %></p>
+    <p>Phone: <%= user.phone %></p>
+</div>
+<hr>

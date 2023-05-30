@@ -55,6 +55,8 @@ gem 'font-awesome-sass', '6.4.0'
 gem 'devise'
 
 
+## Generating the rails components without unnecessary files
+## rails generate scaffold User name:string email:string password:string --skip-stylesheets --skip-javascripts --skip-helper --no-test-framework
 
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]

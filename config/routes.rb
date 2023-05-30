@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
+  resources :users
+  # resources :users, only: [:index, :show, :destroy, :edit, :update]
+  
   # get 'landing_pages/welcome_page'
   get 'landing_pages/privacy_policy', as: 'privacy_policy'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

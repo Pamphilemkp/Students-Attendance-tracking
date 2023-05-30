@@ -1,7 +1,7 @@
 <nav class="navbar bg-body-tertiary fixed-top bg-dark">
   <div class="container-fluid">
 
-    <div class="d-flex gap-2">
+    <div class="d-flex gap-3 align-items-center">
         <div>
             <a class="navbar-brand" href="#">
                 <span class="navbar-text text-light">
@@ -11,26 +11,33 @@
              </a>
         </div>
         
-        <p>
-            <%= link_to "Home", root_path, class: "nav-link text-light" %>
-        </p>
+        <div>
+            <%= link_to  root_path, class: "nav-link #{'active font-weight-bold' if current_page?(root_path)}" do %>
+              <i class="fa fa-home"></i>
+              Home
+            <% end %>
+        </div>
+
+        <div>
+            <%= link_to  users_path, class: "nav-link #{'active font-weight-bold' if current_page?(users_path)}" do %>
+              <i class="fa fa-users"></i>
+              Users
+            <% end %>
+        </div>
 
          <% if current_user %>
-           <p>
-            <%= link_to "Privacy policy", privacy_policy_path, class: "nav-link text-light #{'active font-weight-bold'}" %>
-           </p>
-         <% else %>
-            <p>
-             <%= link_to "Login", new_user_session_path, class: "nav-link text-light #{'active font-weight-bold'}" %>
-           </p>
-           <p>
-             <%= link_to "Register", new_user_registration_path, class: "nav-link text-light #{'active font-weight-bold'}" %>
-           </p>
+           <div>
+            <%= link_to privacy_policy_path, class: "nav-link #{'active font-weight-bold' if current_page?(privacy_policy_path)}" do %>
+               <i class="fa fa-file-signature"></i>
+               Privacy policy
+           </div>
+            <% end %> 
+           
         <% end %>
     </div>
     
     <% if current_user %>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+    <button class="navbar-toggler nav-link" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
        <i class="fa fa-user text-light"></i>
       <span class="text-light">pamphilemkp</span>
       <i class="fa fa-caret-down text-light"></i>
@@ -52,6 +59,16 @@
       <% end %>
       </div>
     </div>
+
+   <% else %>
+      <div class="d-flex gap-3">
+            <p>
+             <%= link_to "Login", new_user_session_path, class: "nav-link #{'active font-weight-bold' if current_page?(new_user_session_path)}" %>
+           </p>
+           <p>
+             <%= link_to "Register", new_user_registration_path, class: "nav-link #{'active font-weight-bold' if current_page?(new_user_registration_path)}" %>
+           </p>
+      </div>
   <% end %>
   </div>
 </nav>

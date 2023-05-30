@@ -6,3 +6,24 @@
 @use '@fortawesome/fontawesome-free/scss/solid';
 @use '@fortawesome/fontawesome-free/scss/brands';
 
+html {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+  margin-bottom: 0px;
+}
+
+.card {
+  margin-top: 50px;
+}
+
+// .container {
+//   margin-top: 50px;
+// }
