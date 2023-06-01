@@ -3,6 +3,9 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
+## live version 
+(live demo)[https://students-attendance-tracking.herokuapp.com/users/sign_up]
+
 Things you may want to cover:
 
 * Ruby version
