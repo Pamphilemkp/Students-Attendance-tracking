@@ -3,6 +3,17 @@ require "active_support/core_ext/integer/time"
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.smtp_settings = {
+  address: 'smtp-relay.sendinblue.com',
+  port: 587,
+  domain: 'https://students-attendance-tracking.herokuapp.com/',
+  user_name: 'pamphilemkp@gmail.com',
+  password: '3Iz5ZK6Cjv1h9m4E',
+  authentication: 'plain',
+  enable_starttls_auto: true
+}
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
