@@ -7,6 +7,19 @@ Rails.application.configure do
   # it changes. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  config.action_mailer.smtp_settings = {
+    address: 'sandbox.smtp.mailtrap.io',
+    port: 587,
+    domain: 'https://students-attendance-tracking.herokuapp.com/',
+    user_name: '29ea74b2d6760d',
+    password: 'd7b55482da73e8',
+    authentication: :plain, # First authentication method
+    auth_methods: [:plain, :login, :cram_md5],
+    enable_starttls_auto: true,
+    openssl_verify_mode: OpenSSL::SSL::VERIFY_NONE
+  }
+
   config.cache_classes = false
 
   # Do not eager load code on boot.
@@ -38,7 +51,7 @@ Rails.application.configure do
   config.active_storage.service = :local
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   config.action_mailer.perform_caching = false
 
