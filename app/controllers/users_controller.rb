@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   ## before_action :set_user, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /users
   def index
@@ -9,6 +10,13 @@ class UsersController < ApplicationController
   # GET /users/1 
   def show
     @user = User.find(params[:id])
+  end
+  
+  def ban
+    @user = User.find(params[:id])
+    @user.locked_access!
+
+    redirect users_path, notice: "User successful banned"
   end
 
   # GET /users/new
@@ -48,6 +56,7 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy
   end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

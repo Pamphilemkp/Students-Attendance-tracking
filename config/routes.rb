@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :users
-  # resources :users, only: [:index, :show, :destroy, :edit, :update]
+  resources :users do
+    member do 
+      patch :ban
+    end
+  end
+  
+  #resources :users
   
   # get 'landing_pages/welcome_page'
   get 'landing_pages/privacy_policy', as: 'privacy_policy'
