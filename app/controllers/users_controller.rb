@@ -14,9 +14,15 @@ class UsersController < ApplicationController
   
   def ban
     @user = User.find(params[:id])
-    @user.locked_access!
+    if @user.access_locked?
+      @user.unlock_access!
+      flash[:notice] = "#{@user.email} was successfully unbanned!"
+    else 
+      @user.lock_access!
+      flash[:alert] = "#{@user.email} was successfully banned!"
+    end
 
-    redirect users_path, notice: "User successful banned"
+    redirect_to users_path
   end
 
   # GET /users/new
