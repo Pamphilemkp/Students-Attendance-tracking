@@ -53,6 +53,8 @@ gem 'sassc'
 gem 'bootstrap', '~> 5.1', '>= 5.1.3'
 gem 'font-awesome-sass', '6.4.0'
 gem 'devise'
+gem 'toastr-rails'
+gem 'omniauth-google-oauth2'
 
 
 ## Generating the rails components without unnecessary files
