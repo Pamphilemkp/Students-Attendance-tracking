@@ -25,7 +25,6 @@ config.action_mailer.smtp_settings = {
   authentication: :plain, # First authentication method
   auth_methods: [:plain, :login, :cram_md5],
   enable_starttls_auto: true,
-  enable_starttls_auto: true
 }
 
   # Code is not reloaded between requests.
