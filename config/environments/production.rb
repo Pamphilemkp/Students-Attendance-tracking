@@ -24,6 +24,7 @@ config.action_mailer.smtp_settings = {
   password: 'b336e8fdd79b94112f949b4b2aa3b6c4',
   authentication: :plain, # First authentication method
   auth_methods: [:plain, :login, :cram_md5],
+  enable_starttls_auto: true,
 }
 
   # Code is not reloaded between requests.
