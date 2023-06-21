@@ -8,6 +8,12 @@
 @use '@fortawesome/fontawesome-free/scss/brands';
 
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   margin: 0;
 }
