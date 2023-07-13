@@ -5,26 +5,14 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'https://students-attendance-tracking.herokuapp.com/' }
 
 
-config.action_mailer.delivery_method = :smtp
-# config.action_mailer.smtp_settings = {
-#   address: 'smtp-relay.sendinblue.com',
-#   port: 587,
-#   domain: 'https://students-attendance-tracking.herokuapp.com/',
-#   user_name: 'pamphilemkp@gmail.com',
-#   password: '3Iz5ZK6Cjv1h9m4E',
-#   authentication: 'plain',
-#   enable_starttls_auto: true
-# }
-
 config.action_mailer.smtp_settings = {
-  address: 'live.smtp.mailtrap.io',
+  address: 'smtp-relay.sendinblue.com',
   port: 587,
-  domain: 'https://students-attendance-tracking.herokuapp.com/',
-  user_name: 'api',
-  password: 'b336e8fdd79b94112f949b4b2aa3b6c4',
-  authentication: :plain, # First authentication method
-  auth_methods: [:plain, :login, :cram_md5],
+  domain: 'https://students-attendance-tracking.herokuapp.com',
+  password: 'xsmtpsib-b056cbd7716933f2418efb271ab27219397d83634353636c8f9b66886f65c7b6-x0NCwGORbjTL8ZcD',
+  authentication: 'plain',
   enable_starttls_auto: true,
+  openssl_verify_mode: OpenSSL::SSL::VERIFY_NONE
 }
 
   # Code is not reloaded between requests.

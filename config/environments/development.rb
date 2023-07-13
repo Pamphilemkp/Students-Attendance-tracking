@@ -8,17 +8,31 @@ Rails.application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
+  # config.action_mailer.smtp_settings = {
+  #   address: 'sandbox.smtp.mailtrap.io',
+  #   port: 587,
+  #   domain: 'https://students-attendance-tracking.herokuapp.com/',
+  #   user_name: '29ea74b2d6760d',
+  #   password: 'd7b55482da73e8',
+  #   authentication: :plain, # First authentication method
+  #   auth_methods: [:plain, :login, :cram_md5],
+  #   enable_starttls_auto: true,
+  #   openssl_verify_mode: OpenSSL::SSL::VERIFY_NONE
+  # }
+
+
   config.action_mailer.smtp_settings = {
-    address: 'sandbox.smtp.mailtrap.io',
+    address: 'smtp-relay.sendinblue.com',
     port: 587,
-    domain: 'https://students-attendance-tracking.herokuapp.com/',
-    user_name: '29ea74b2d6760d',
-    password: 'd7b55482da73e8',
-    authentication: :plain, # First authentication method
-    auth_methods: [:plain, :login, :cram_md5],
+    domain: 'http://127.0.0.1:3000/',
+    user_name: 'pamphilemkp@gmail.com',
+    password: 'xsmtpsib-b056cbd7716933f2418efb271ab27219397d83634353636c8f9b66886f65c7b6-x0NCwGORbjTL8ZcD',
+    authentication: 'plain',
     enable_starttls_auto: true,
     openssl_verify_mode: OpenSSL::SSL::VERIFY_NONE
   }
+
+
 
   config.cache_classes = false
 
