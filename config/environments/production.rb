@@ -2,14 +2,15 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  config.action_mailer.default_url_options = { host: 'https://students-attendance-tracking.herokuapp.com/' }
+  config.action_mailer.default_url_options = { host: 'https://students-attendance-tracking.herokuapp.com' }
 
 
 config.action_mailer.smtp_settings = {
-  address: 'smtp-relay.sendinblue.com',
+  address: Rails.application.credentials.smtp[:adress],
   port: 587,
-  domain: 'https://students-attendance-tracking.herokuapp.com',
-  password: 'xsmtpsib-b056cbd7716933f2418efb271ab27219397d83634353636c8f9b66886f65c7b6-x0NCwGORbjTL8ZcD',
+  domain: Rails.application.credentials.smtp[:production][:domain],
+  user_name: Rails.application.credentials.smtp[:user_name],
+  password: Rails.application.credentials.smtp[:password],
   authentication: 'plain',
   enable_starttls_auto: true,
   openssl_verify_mode: OpenSSL::SSL::VERIFY_NONE

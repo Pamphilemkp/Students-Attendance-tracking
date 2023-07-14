@@ -81,6 +81,20 @@ test:
 #
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
+
+
+# # # smtp:
+# # #   adress: smtp-relay.sendinblue.com
+# # #   user_name: pamphilemkp@gmail.com
+# # #   password: xsmtpsib-b056cbd7716933f2418efb271ab27219397d83634353636c8f9b66886f65c7b6-x0NCwGORbjTL8ZcD
+# # #   development:
+# # #     domain: http://127.0.0.1:3000/
+# # #   production:
+# # #     domain: https://students-attendance-tracking.herokuapp.com
+
+# # # google:
+# # #   client_id: 606415288118-v453nf5t8iij3a4smlf38eio8epj3hjh.apps.googleusercontent.com
+# # #   client_secret: GOCSPX-Lz7a6BEdpleh5BwJaWRTnvvsGh0
 #
 production:
   <<: *default
