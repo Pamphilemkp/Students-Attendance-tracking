@@ -22,12 +22,11 @@ Rails.application.configure do
 
 
   config.action_mailer.smtp_settings = {
-    address: 'smtp-relay.sendinblue.com',
+    address: Rails.application.credentials.smtp[:adress],
     port: 587,
-    domain: 'http://127.0.0.1:3000/',
-    user_name: 'pamphilemkp@gmail.com',
-    password: 'xsmtpsib-b056cbd7716933f2418efb271ab27219397d83634353636c8f9b66886f65c7b6-x0NCwGORbjTL8ZcD',
-    authentication: 'plain',
+    domain: Rails.application.credentials.smtp[:development][:domain],
+    user_name: Rails.application.credentials.smtp[:user_name],
+    password: Rails.application.credentials.smtp[:password],
     enable_starttls_auto: true,
     openssl_verify_mode: OpenSSL::SSL::VERIFY_NONE
   }
