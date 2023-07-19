@@ -23,8 +23,8 @@
     <p>Current ip address: <%= user.current_sign_in_ip %></p>
     <p>Last ip address: <%= user.last_sign_in_ip %></p>
     <p>Locked at: 
-    <% unless  user.locked_at? %>
-        <% user.locked_at %>
+    <% if  user.locked_at?%>
+        <%= user.locked_at %>
     <% end %></p>
     
 </div>
